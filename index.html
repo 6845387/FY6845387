@@ -1,11 +1,145 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="assets/styles.css">
 <html>
-    <title>Investigating the most common root causes of data breaches</title>
-    <head>
-        <img src="assets/WebBanner2023.png" alt="Banner" width="1200" height="300">
-    </head>
+    <header>
+        <title>Investigating the most common root causes of data breaches</title>
+        <h1 class="course-title">ENG0018 Computer Laboratory 2023-24</h1>
+        <h1 class="urn">URN: 6845387</h1>
+        <h1>Investing the most common root causes of data breaches</h1>
+    </header>
+    
     <hr>
-    <h1><b>ENG0018: Computer Laboratory 2023-24</b></h1>
-    <h2>URN 6845387</h2>
-    <hr>
+    <div class="row">
+        <div class="column">
+            <h2>Table of Contents</h2>
+            <table>
+                <tr>
+                    <th>Section</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Abstrdfact</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="column">
+            <h2>Abstract</h2>
+            <p>
+                Data breaches are a major threat to security of both individuals and organisations. 
+                Losses from such incidents can include financial, legal, reputational and regulatory. 
+                We start by covering the history of cyber attacks, and how they can be organised into 
+                the three main categories: Credentials, Human Nature and misconfiguration, before 
+                delving in detail on each of the three categories. For credentials, the problems 
+                with passwords, MFA and disadvantages of MFA are covered. For human nature, both the 
+                victim and perpetrator sides are covered. In addition, various examples are mentioned. 
+                For all categories, statistics and explanations are referenced appropriately. We also 
+                discuss some mitigations to reduce the likelihood of such incidents occurring in the future. 
+            </p>
+        </div>
+    </div>
+    
+    <section>
+        <h2>Introduction</h2>
+        <p>The world’s first cyber-attack, the “Morris Worm” began on 2nd November 1988, 
+        causing a national slowdown of the US network (FBI, n.d.). This was a revelation in 
+        the world of computer security highlighting the societal importance of computers. 
+        Between 2001-2021, there was a 1517% increase in affected individuals (Griffiths, 2023). 
+        Common causes of data breaches are:
+        </p>
+        <ul>
+            <li>Credentials</li>
+            <li>Human Nature</li>
+            <li>Misconfiguration</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Credentials</h2>
+        <p>Credentials are defined as one or more from a password, token or certificate to verify user identity (NCSC, n.d.). </p>
+        <h3>Problems with Passwords</h3>
+        <p>
+            The cheapest to use credentials are usernames and passwords. However, they are vulnerable to 
+            approaches like social engineering, brute force, and credential stuffing (CPNI, 2015). A brute 
+            force attack is when random characters are used against a password input, to eventually obtain
+            the correct password. As passwords have a minimum but not a maximum length, success is rare. As 
+            85% of people reuse passwords (Bitwarden, 2023), credential stuffing attacks, where previously 
+            exposed passwords are abused, are more successful. 
+        </p>
+        <h3>Multi-factor Authentication (MFA)</h3>
+        <p>MFA is the use of at least 2 factors for successful authentication to prevent access even if 
+            the password is compromised. Authentication factors are one of three concepts: Something you
+            know, have or are. The first is a PIN or password. The second is an OTP (One-Time Password) 
+            from an app, SMS, or hardware device. The third factor is biometrics, such as facial/iris/fingerprint, 
+            which is invulnerable to theft. 
+        </p>
+        <h4>Problems with MFA</h4>
+        <p>
+            Depending on the additional factor used, there can be disadvantages. Firstly, if SMS codes are used, 
+            it is vulnerable to SIM swaps, when an attacker impersonates the billpayer to activate a new sim to 
+            intercept codes and bypass MFA. Secondly, due to phishing, where the password and code are intercepted 
+            and forwarded, most OTP factors can be rendered useless. Currently, the only unphishable method is to 
+            use a hardware token, like YubiKeys, which verify both the user and the server, with the FIDO2 protocol (Alqubaisi, et al., 2020).
+        </p>
+    <section>
+        <h2>Human Nature</h2>
+        <p>
+            Human nature is a cause of data breaches.  They include, Kindness, truth-telling, and responsibility/negligence 
+            from the victim and motivations, insider threat and social engineering from the perpetrator side. 
+        </p>
+        <h3>Victim</h3>
+        <p>
+            Altruism was observed in humanity over the past tens of thousands of years (Taylor, 2020), 
+            and can be linked to cybercrime through “tailgating” attacks. This is when an unauthorised 
+            person “follows” the victim into restricted areas (Fortinet, n.d.). Responsibility is a 
+            major factor in cyber security. In many companies, most employees are not in IT (Sutherland & Powell, 2023) 
+            and believe that cybersecurity is not their problem. However, 23% of attacks were the 
+            result of careless/uninformed employees, see Figure 1. 
+        </p>
+        <img src="assets/WebBanner2023.png" alt="Banner" width="500" height="140">
+        <p>
+            Negligence is also a factor. Numerous instances of misdelivery occurred, where information is sent to 
+            the wrong recipient (Verizon, 2018). In 2015, the email addresses of HIV patients were exposed to each 
+            other twice, by the sender putting the emails in the “To” field, instead of “BCC”. The ICO (Information Commissioner Office) 
+            fined the NHS Trust £180,000 (Chris Fox, 2016). 
+        </p>
+        <h3>Perpetrator</h3>
+        <p>
+            On the other hand, the main causes from the perpetrator side are insider threat and social engineering. 
+            The four factors of insider threat can be explained by the “MICE” acronym (Burkett, 2013): 
+        </p>
+            
+            <ol>
+                <li>Money</li>
+                <li>Ideology</li>
+                <li>Blackmail</li>
+                <li>Ego</li>
+            </ol>
+            
+        <p>
+            Money is a valuable commodity in society, making the insiders susceptible to being “bought” by those 
+            willing to pay to get information. Ideology can cause issues when an organisation violates valued 
+            principles, enticing them to leak or sabotage. Blackmail is effective when an insider has kompromat, 
+            and threats to leak the material are made to force compliance. Finally, Ego matters, as insiders 
+            sometimes consider themselves to be “above the law,” making it easier for an attacker to manipulate 
+            such insider to leak information, while making them feel good. Secondly, social engineering is a 
+            major problem, where human interaction is abused to capture information (CISA, 2021). Major events 
+            such as elections, holidays and disasters are used to gain information. For example, when the NHS 
+            were deploying new COVID-19 vaccines, scammers spammed the population with texts like this:
+        </p>
+        <blockquote>
+            “NHS: We have identified that you are eligible to apply for your vaccine. For more information and to apply, follow here: uk-application-form.com” (Ofcom, 2022).
+        </blockquote>
+        
+    <section>
+        <h2>Misconfiguration</h2>
+        <h3>Common Examples</h3>
+    </section>
+
+    <section>
+        <h2>Conclusion</h2>    
+    </section>
+    
+    <section>
+        <h2>References</h2>
+    </section>
 </html>
