@@ -2,8 +2,17 @@
 <link rel="stylesheet" href="assets/styles.css">
 <html>
     <header>
+        <div class="row">
+            <div class="column">
+                <h1 class="course-title">ENG0018 Computer Laboratory 2023-24</h1>
+            </div>
+            <div class="column">
+                <img class="column" src="assets/WebLogoCompact.png" width="32px">
+            </div>
+            
+        </div>
         <title>Investigating the most common root causes of data breaches</title>
-        <h1 class="course-title">ENG0018 Computer Laboratory 2023-24</h1>
+        
         <h1 class="urn">URN: 6845387</h1>
         <h1>Investing the most common root causes of data breaches</h1>
     </header>
@@ -95,7 +104,8 @@
             and believe that cybersecurity is not their problem. However, 23% of attacks were the 
             result of careless/uninformed employees, see Figure 1. 
         </p>
-        <img src="assets/WebBanner2023.png" alt="Banner" width="500" height="140">
+        <img src="assets/Fig1_IT_Sec_Risk_Survey_2017_Kaspersky.png" alt="Figure 1: The Human Factor in IT Security (Kaspersky, 2017)">
+        <p>Figure 1: The Human Factor in IT Security (Kaspersky, 2017)</p>
         <p>
             Negligence is also a factor. Numerous instances of misdelivery occurred, where information is sent to 
             the wrong recipient (Verizon, 2018). In 2015, the email addresses of HIV patients were exposed to each 
@@ -125,21 +135,68 @@
             major problem, where human interaction is abused to capture information (CISA, 2021). Major events 
             such as elections, holidays and disasters are used to gain information. For example, when the NHS 
             were deploying new COVID-19 vaccines, scammers spammed the population with texts like this:
+
+            <q>
+                NHS: We have identified that you are eligible to apply for your vaccine. For more information and to apply, follow here: uk-application-form.com </q>
+            (Ofcom, 2022).
         </p>
-        <blockquote>
-            “NHS: We have identified that you are eligible to apply for your vaccine. For more information and to apply, follow here: uk-application-form.com” (Ofcom, 2022).
-        </blockquote>
         
+        <p>
+            Elderly people are more vulnerable to scams by email, text or phone call over younger people (see Figure 2).  In all methods, older adults (60+ years) had a 
+            higher share of loss reports, with 11%, 5%, and 24% respectively, compared with 7%, 4% and 10% for the younger adults (18-59) (FTC, 2022).
+        </p>
+
+        <img src="assets/Fig2_ContactMethods.png" alt="Figure 2: Who experiences scams? A story for all ages (FTC, 2022)" width="750px">
+        <p>Figure 2: Who experiences scams? A story for all ages (FTC, 2022)</p>
     <section>
         <h2>Misconfiguration</h2>
+        <p>
+            The final category of data breach causes is misconfiguration, defined as “An incorrect or suboptimal 
+            configuration of an information system or system component that may lead to vulnerabilities.” (NIST, n.d.). 
+            These are the most common causes, as complex plans are not needed, but simple methods are used instead, 
+            comparable to leaving a door unlocked, and a thief trespassing. 
+        </p>
         <h3>Common Examples</h3>
+        <p>
+            The top ten misconfigurations can be narrowed to three issues: default configurations, 
+            weak/broken access control and poor patch management (Gatlan, 2023). Numerous software 
+            products have default configurations, geared towards convenience over security, and 
+            must be “hardened” to prevent breaches. Stinginess and convenience lead to access 
+            misconfigurations E.g., weak passwords are used for efficiency, or when software 
+            licencing is per user, but to reduce costs, many users share a single account, 
+            resulting in no accountability, as countless people had access. Developers create 
+            “patches” to repair “holes”, which are identified vulnerabilities. If these are not 
+            applied regularly, the likelihood of exploitation increases, easily fixed with patching. 
+        </p>
     </section>
 
     <section>
-        <h2>Conclusion</h2>    
+        <h2>Conclusion</h2>
+        <p>
+            In conclusion, the human aspect is more important than assumed, as recent systems are so 
+            secure, the user is the weakest link. Secondly, there is a fine line between convenience 
+            and security. Increased security is positive until the point of interruption, leading to 
+            flaws created for efficiency, making improvements futile.
+        </p>    
     </section>
     
     <section>
         <h2>References</h2>
+        <p>Alqubaisi, F., Wazan, A. S., Ahmad, L. & Chadwick, D. W., 2020. Should We Rush to Implement Passwordless Single Factor FIDO2 based Authentication?. Dubai, IEEE.</p>
+        
+        <p>Bitwarden, 2023. Security habits around the world: A closer look at password security statistics. [Online]</p>
+        <p>Available at: https://bitwarden.com/blog/a-closer-look-at-password-statistics/</p>
+        <p>[Accessed 22 November 2023].</p>
+
+        <p>Burkett, R., 2013. An alternative framework for agent recruitment: from MICE to RASCLS. Studies in Intelligence, 57(1), pp. 7-17.</p>
+
+        <p>Chris Fox, 2016. NHS Trust fined for 56 Dean Street HIV status leak. BBC News, 9 May, p. 1.</p>
+
+        <p>CISA, 2021. Avoiding Social Engineering and Phishing Attacks. [Online]</p>
+        <p>Available at: https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks</p>
+        <p>[Accessed 22 November 2023]</p>
+            
+
+            
     </section>
 </html>
