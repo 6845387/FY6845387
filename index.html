@@ -3,290 +3,296 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <html>
     <header>
-        <img src="assets/WebBanner2023.png" width="50%" >
-        <h1 class="course-title">ENG0018 Computer Laboratory 2023-24</h1>
+        <img class="toplogo" src="assets/WebBanner2023.svg">
+        <h1 class="course-title">./ ENG0018 Computer Laboratory 2023-24</h1>
         <title>Investigating the most common root causes of data breaches</title>
         
         <h1 class="urn">URN: 6845387</h1>
         <h1 id="pagetitle">Investing the most common root causes of data breaches</h1>        
     </header>
-    
     <hr>
-    <div class="row">
-        <div class="column">
-            <h2 id="toc">Table of Contents</h2>
-            <table class="tableofcontents">
-                <tr>
-                    <th>Section</th>
-                    <th>Subsection</th>
-                </tr>
-                <tr>
-                    <td><a href="#abstract">Abstract</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#introduction">Introduction</a></td>
-                </tr>
-                <tr>
-                    <td rowspan="4" ><a href="#credentials">Credentials</a></td>
-                </tr>
+    <body class="mainbody">
+        <div class="row">
+            <div class="column">
+                <h2 id="toc">Table of Contents</h2>
+                <table class="tableofcontents">
                     <tr>
-                        <td><a href="#problempasswd">Problems with Passwords</a></td>
+                        <th>Section</th>
+                        <th>Subsection</th>
                     </tr>
                     <tr>
-                        <td><a href="#mfa">Multi-factor Authentication</a></td>
+                        <td><a href="#abstract">Abstract</a></td>
                     </tr>
                     <tr>
-                        <td><a href="#problemmfa">Problems with MFA</a></td>
-                    </tr>
-                <tr>
-                    <td rowspan="3"><a href="#humannature">Human Nature</a></td>
-                </tr>
-                    <tr>
-                        <td><a href="#victim">Victim</a></td>
+                        <td><a href="#introduction">Introduction</a></td>
                     </tr>
                     <tr>
-                        <td><a href="#perpetrator">Perpetrator</a></td>
+                        <td rowspan="4" ><a href="#credentials">Credentials</a></td>
                     </tr>
-                <tr>
-                    <td><a href="#misconfiguration">Misconfiguration</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#conclusion">Conclusion</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#references">References</a></td>
-                </tr>
-            </table>
+                        <tr>
+                            <td><a href="#problempasswd">Problems with Passwords</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#mfa">Multi-factor Authentication</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#problemmfa">Problems with MFA</a></td>
+                        </tr>
+                    <tr>
+                        <td rowspan="3"><a href="#humannature">Human Nature</a></td>
+                    </tr>
+                        <tr>
+                            <td><a href="#victim">Victim</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#perpetrator">Perpetrator</a></td>
+                        </tr>
+                    <tr>
+                        <td><a href="#misconfiguration">Misconfiguration</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#conclusion">Conclusion</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#references">References</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="column">
+                <h2 id="abstract">Abstract</h2>
+                <p>
+                    Data breaches are a major threat to security of both individuals and organisations. 
+                    Losses from such incidents can include financial, legal, reputational and regulatory. 
+                    We start by covering the history of cyber attacks, and how they can be organised into 
+                    the three main categories: Credentials, Human Nature and misconfiguration, before 
+                    delving in detail on each of the three categories. For credentials, the problems 
+                    with passwords, MFA and disadvantages of MFA are covered. For human nature, both the 
+                    victim and perpetrator sides are covered. In addition, various examples are mentioned. 
+                    For all categories, statistics and explanations are referenced appropriately. We also 
+                    discuss some mitigations to reduce the likelihood of such incidents occurring in the future. 
+                </p>
+            </div>
         </div>
-        <div class="column">
-            <h2 id="abstract">Abstract</h2>
-            <p>
-                Data breaches are a major threat to security of both individuals and organisations. 
-                Losses from such incidents can include financial, legal, reputational and regulatory. 
-                We start by covering the history of cyber attacks, and how they can be organised into 
-                the three main categories: Credentials, Human Nature and misconfiguration, before 
-                delving in detail on each of the three categories. For credentials, the problems 
-                with passwords, MFA and disadvantages of MFA are covered. For human nature, both the 
-                victim and perpetrator sides are covered. In addition, various examples are mentioned. 
-                For all categories, statistics and explanations are referenced appropriately. We also 
-                discuss some mitigations to reduce the likelihood of such incidents occurring in the future. 
+        
+        <section>
+            <h2 id="introduction">Introduction</h2>
+            <p>The world’s first cyber-attack, the “Morris Worm” began on 2nd November 1988, 
+            causing a national slowdown of the US network <a href="https://www.fbi.gov/history/famous-cases/morris-worm">(FBI, n.d.)</a>. This was a revelation in 
+            the world of computer security highlighting the societal importance of computers. 
+            Between 2001-2021, there was a 1517% increase in affected individuals <a href="https://aag-it.com/the-latest-cyber-crime-statistics/">(Griffiths, 2023)</a>. 
+            Common causes of data breaches are:
             </p>
-        </div>
-    </div>
+            <ul>
+                <li>Credentials</li>
+                <li>Human Nature</li>
+                <li>Misconfiguration</li>
+            </ul>
+        </section>
+        <section>
+            <h2 id="credentials">Credentials</h2>
+            <p>Credentials are defined as one or more from a password, token or certificate to verify user identity <a href="https://www.ncsc.gov.uk/section/advice-guidance/glossary">(NCSC, n.d.)</a>. </p>
+            <h3 id="problempasswd">Problems with Passwords</h3>
+            <p>
+                The cheapest to use credentials are usernames and passwords. However, they are vulnerable to 
+                approaches like social engineering, brute force, and credential stuffing <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/458857/Password_guidance_-_simplifying_your_approach.pdf">(CPNI, 2015)</a>. A brute 
+                force attack is when random characters are used against a password input, to eventually obtain
+                the correct password. As passwords have a minimum but not a maximum length, success is rare. As 
+                85% of people reuse passwords <a href="https://bitwarden.com/blog/a-closer-look-at-password-statistics/">(Bitwarden, 2023)</a>, credential stuffing attacks, where previously 
+                exposed passwords are abused, are more successful. 
+            </p>
+            <h3 id="mfa">Multi-factor Authentication (MFA)</h3>
+            <p>MFA is the use of at least 2 factors for successful authentication to prevent access even if 
+                the password is compromised. Authentication factors are one of three concepts: Something you
+                know, have or are. The first is a PIN or password. The second is an OTP (One-Time Password) 
+                from an app, SMS, or hardware device. The third factor is biometrics, such as facial/iris/fingerprint, 
+                which is invulnerable to theft. 
+            </p>
+            <h3 id="problemmfa">Problems with MFA</h3>
+            <p>
+                Depending on the additional factor used, there can be disadvantages. Firstly, if SMS codes are used, 
+                it is vulnerable to SIM swaps, when an attacker impersonates the billpayer to activate a new sim to 
+                intercept codes and bypass MFA. Secondly, due to phishing, where the password and code are intercepted 
+                and forwarded, most OTP factors can be rendered useless. Currently, the only unphishable method is to 
+                use a hardware token, like YubiKeys, which verify both the user and the server, with the FIDO2 protocol (Alqubaisi, et al., 2020).
+            </p>
+        <section>
+            <h2 id="humannature">Human Nature</h2>
+            <p>
+                Human nature is a cause of data breaches.  They include, Kindness, truth-telling, and responsibility/negligence 
+                from the victim and motivations, insider threat and social engineering from the perpetrator side. 
+            </p>
+            <h3 id="victim">Victim</h3>
+            <p>
+                Altruism was observed in humanity over the past tens of thousands of years (Taylor, 2020), 
+                and can be linked to cybercrime through “tailgating” attacks. This is when an unauthorised 
+                person “follows” the victim into restricted areas <a href="https://www.fortinet.com/resources/cyberglossary/tailgating-attack">(Fortinet, n.d.)</a>. Responsibility is a 
+                major factor in cyber security. In many companies, most employees are not in IT (Sutherland & Powell, 2023) 
+                and believe that cybersecurity is not their problem. However, 23% of attacks were the 
+                result of careless/uninformed employees, see Figure 1. 
+            </p>
+            <div class="centre">
+                <img src="assets/Fig1_IT_Sec_Risk_Survey_2017_Kaspersky.png" alt="Figure 1: The Human Factor in IT Security (Kaspersky, 2017)">
+            <p>Figure 1: The Human Factor in IT Security <a href="https://media.kasperskycontenthub.com/wp-content/uploads/sites/100/2017/11/10083900/20170710_Report_Human-Factor-In-ITSec_eng_final.pdf">(Kaspersky, 2017)</a></p>
+            </div>
+            
+            <p>
+                Negligence is also a factor. Numerous instances of misdelivery occurred, where information is sent to 
+                the wrong recipient <a href="https://www.verizon.com/business/en-gb/resources/reports/dbir/">(Verizon, 2018)</a>. In 2015, the email addresses of HIV patients were exposed to each 
+                other twice, by the sender putting the emails in the “To” field, instead of “BCC”. The ICO (Information Commissioner Office) 
+                fined the NHS Trust £180,000 (Chris Fox, 2016). 
+            </p>
+            <h3 id="perpetrator">Perpetrator</h3>
+            <p>
+                On the other hand, the main causes from the perpetrator side are insider threat and social engineering. 
+                The four factors of insider threat can be explained by the “MICE” acronym (Burkett, 2013): 
+            </p>
+                
+                <ol>
+                    <li>Money</li>
+                    <li>Ideology</li>
+                    <li>Blackmail</li>
+                    <li>Ego</li>
+                </ol>
+                
+            <p>
+                Money is a valuable commodity in society, making the insiders susceptible to being “bought” by those 
+                willing to pay to get information. Ideology can cause issues when an organisation violates valued 
+                principles, enticing them to leak or sabotage. Blackmail is effective when an insider has kompromat, 
+                and threats to leak the material are made to force compliance. Finally, Ego matters, as insiders 
+                sometimes consider themselves to be “above the law,” making it easier for an attacker to manipulate 
+                such insider to leak information, while making them feel good. Secondly, social engineering is a 
+                major problem, where human interaction is abused to capture information <a href="https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks">(CISA, 2021)</a>. Major events 
+                such as elections, holidays and disasters are used to gain information. For example, when the NHS 
+                were deploying new COVID-19 vaccines, scammers spammed the population with texts like this:
+                <p></p>
+                <q>
+                    NHS: We have identified that you are eligible to apply for your vaccine. For more information and to apply, follow here: uk-application-form.com </q>
+                <a href="https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/scams/coronavirus-scam-calls-and-texts">(Ofcom, 2022)</a>.
+                </q>
+                
+            </p>
+            
+            <p>
+                Elderly people are more vulnerable to scams by email, text or phone call over younger people (see Figure 2).  In all methods, older adults (60+ years) had a 
+                higher share of loss reports, with 11%, 5%, and 24% respectively, compared with 7%, 4% and 10% for the younger adults (18-59) (FTC, 2022).
+            </p>
+            <div class="centre">
+                <img src="assets/Fig2_ContactMethods.png" alt="Figure 2: Who experiences scams? A story for all ages (FTC, 2022)" width="750px">
+                <p>Figure 2: Who experiences scams? A story for all ages <a href="https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2022/12/who-experiences-scams-story-all-ages">(FTC, 2022)</a></p>
+            </div>
+            
+        <section>
+            <h2 id="misconfiguration">Misconfiguration</h2>
+            <p>
+                The final category of data breach causes is misconfiguration, defined as “An incorrect or suboptimal 
+                configuration of an information system or system component that may lead to vulnerabilities.” <a href="https://csrc.nist.gov/glossary/term/misconfiguration">(NIST, n.d.)</a>. 
+                These are the most common causes, as complex plans are not needed, but simple methods are used instead, 
+                comparable to leaving a door unlocked, and a thief trespassing. 
+            </p>
+            <h3 id="commonexamples">Common Examples</h3>
+            <p>
+                The top ten misconfigurations can be narrowed to three issues: default configurations, 
+                weak/broken access control and poor patch management <a href="https://www.bleepingcomputer.com/news/security/nsa-and-cisa-reveal-top-10-cybersecurity-misconfigurations/">(Gatlan, 2023)</a>. Numerous software 
+                products have default configurations, geared towards convenience over security, and 
+                must be “hardened” to prevent breaches. Stinginess and convenience lead to access 
+                misconfigurations E.g., weak passwords are used for efficiency, or when software 
+                licencing is per user, but to reduce costs, many users share a single account, 
+                resulting in no accountability, as countless people had access. Developers create 
+                “patches” to repair “holes”, which are identified vulnerabilities. If these are not 
+                applied regularly, the likelihood of exploitation increases, easily fixed with patching. 
+            </p>
+        </section>
     
-    <section>
-        <h2 id="introduction">Introduction</h2>
-        <p>The world’s first cyber-attack, the “Morris Worm” began on 2nd November 1988, 
-        causing a national slowdown of the US network <a href="https://www.fbi.gov/history/famous-cases/morris-worm">(FBI, n.d.)</a>. This was a revelation in 
-        the world of computer security highlighting the societal importance of computers. 
-        Between 2001-2021, there was a 1517% increase in affected individuals <a href="https://aag-it.com/the-latest-cyber-crime-statistics/">(Griffiths, 2023)</a>. 
-        Common causes of data breaches are:
-        </p>
-        <ul>
-            <li>Credentials</li>
-            <li>Human Nature</li>
-            <li>Misconfiguration</li>
-        </ul>
-    </section>
-    <section>
-        <h2 id="credentials">Credentials</h2>
-        <p>Credentials are defined as one or more from a password, token or certificate to verify user identity <a href="https://www.ncsc.gov.uk/section/advice-guidance/glossary">(NCSC, n.d.)</a>. </p>
-        <h3 id="problempasswd">Problems with Passwords</h3>
-        <p>
-            The cheapest to use credentials are usernames and passwords. However, they are vulnerable to 
-            approaches like social engineering, brute force, and credential stuffing <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/458857/Password_guidance_-_simplifying_your_approach.pdf">(CPNI, 2015)</a>. A brute 
-            force attack is when random characters are used against a password input, to eventually obtain
-            the correct password. As passwords have a minimum but not a maximum length, success is rare. As 
-            85% of people reuse passwords <a href="https://bitwarden.com/blog/a-closer-look-at-password-statistics/">(Bitwarden, 2023)</a>, credential stuffing attacks, where previously 
-            exposed passwords are abused, are more successful. 
-        </p>
-        <h3 id="mfa">Multi-factor Authentication (MFA)</h3>
-        <p>MFA is the use of at least 2 factors for successful authentication to prevent access even if 
-            the password is compromised. Authentication factors are one of three concepts: Something you
-            know, have or are. The first is a PIN or password. The second is an OTP (One-Time Password) 
-            from an app, SMS, or hardware device. The third factor is biometrics, such as facial/iris/fingerprint, 
-            which is invulnerable to theft. 
-        </p>
-        <h3 id="problemmfa">Problems with MFA</h3>
-        <p>
-            Depending on the additional factor used, there can be disadvantages. Firstly, if SMS codes are used, 
-            it is vulnerable to SIM swaps, when an attacker impersonates the billpayer to activate a new sim to 
-            intercept codes and bypass MFA. Secondly, due to phishing, where the password and code are intercepted 
-            and forwarded, most OTP factors can be rendered useless. Currently, the only unphishable method is to 
-            use a hardware token, like YubiKeys, which verify both the user and the server, with the FIDO2 protocol (Alqubaisi, et al., 2020).
-        </p>
-    <section>
-        <h2 id="humannature">Human Nature</h2>
-        <p>
-            Human nature is a cause of data breaches.  They include, Kindness, truth-telling, and responsibility/negligence 
-            from the victim and motivations, insider threat and social engineering from the perpetrator side. 
-        </p>
-        <h3 id="victim">Victim</h3>
-        <p>
-            Altruism was observed in humanity over the past tens of thousands of years (Taylor, 2020), 
-            and can be linked to cybercrime through “tailgating” attacks. This is when an unauthorised 
-            person “follows” the victim into restricted areas <a href="https://www.fortinet.com/resources/cyberglossary/tailgating-attack">(Fortinet, n.d.)</a>. Responsibility is a 
-            major factor in cyber security. In many companies, most employees are not in IT (Sutherland & Powell, 2023) 
-            and believe that cybersecurity is not their problem. However, 23% of attacks were the 
-            result of careless/uninformed employees, see Figure 1. 
-        </p>
-        <img src="assets/Fig1_IT_Sec_Risk_Survey_2017_Kaspersky.png" alt="Figure 1: The Human Factor in IT Security (Kaspersky, 2017)">
-        <p>Figure 1: The Human Factor in IT Security <a href="https://media.kasperskycontenthub.com/wp-content/uploads/sites/100/2017/11/10083900/20170710_Report_Human-Factor-In-ITSec_eng_final.pdf">(Kaspersky, 2017)</a></p>
-        <p>
-            Negligence is also a factor. Numerous instances of misdelivery occurred, where information is sent to 
-            the wrong recipient <a href="https://www.verizon.com/business/en-gb/resources/reports/dbir/">(Verizon, 2018)</a>. In 2015, the email addresses of HIV patients were exposed to each 
-            other twice, by the sender putting the emails in the “To” field, instead of “BCC”. The ICO (Information Commissioner Office) 
-            fined the NHS Trust £180,000 (Chris Fox, 2016). 
-        </p>
-        <h3 id="perpetrator">Perpetrator</h3>
-        <p>
-            On the other hand, the main causes from the perpetrator side are insider threat and social engineering. 
-            The four factors of insider threat can be explained by the “MICE” acronym (Burkett, 2013): 
-        </p>
-            
-            <ol>
-                <li>Money</li>
-                <li>Ideology</li>
-                <li>Blackmail</li>
-                <li>Ego</li>
-            </ol>
-            
-        <p>
-            Money is a valuable commodity in society, making the insiders susceptible to being “bought” by those 
-            willing to pay to get information. Ideology can cause issues when an organisation violates valued 
-            principles, enticing them to leak or sabotage. Blackmail is effective when an insider has kompromat, 
-            and threats to leak the material are made to force compliance. Finally, Ego matters, as insiders 
-            sometimes consider themselves to be “above the law,” making it easier for an attacker to manipulate 
-            such insider to leak information, while making them feel good. Secondly, social engineering is a 
-            major problem, where human interaction is abused to capture information <a href="https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks">(CISA, 2021)</a>. Major events 
-            such as elections, holidays and disasters are used to gain information. For example, when the NHS 
-            were deploying new COVID-19 vaccines, scammers spammed the population with texts like this:
-            <p></p>
-            <q>
-                NHS: We have identified that you are eligible to apply for your vaccine. For more information and to apply, follow here: uk-application-form.com </q>
-            <a href="https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/scams/coronavirus-scam-calls-and-texts">(Ofcom, 2022)</a>.
-            </q>
-            
-        </p>
+        <section>
+            <h2 id="conclusion">Conclusion</h2>
+            <p>
+                In conclusion, the human aspect is more important than assumed, as recent systems are so 
+                secure, the user is the weakest link. Secondly, there is a fine line between convenience 
+                and security. Increased security is positive until the point of interruption, leading to 
+                flaws created for efficiency, making improvements futile.
+            </p>    
+        </section>
         
-        <p>
-            Elderly people are more vulnerable to scams by email, text or phone call over younger people (see Figure 2).  In all methods, older adults (60+ years) had a 
-            higher share of loss reports, with 11%, 5%, and 24% respectively, compared with 7%, 4% and 10% for the younger adults (18-59) (FTC, 2022).
-        </p>
-
-        <img src="assets/Fig2_ContactMethods.png" alt="Figure 2: Who experiences scams? A story for all ages (FTC, 2022)" width="750px">
-        <p>Figure 2: Who experiences scams? A story for all ages <a href="https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2022/12/who-experiences-scams-story-all-ages">(FTC, 2022)</a></p>
-    <section>
-        <h2 id="misconfiguration">Misconfiguration</h2>
-        <p>
-            The final category of data breach causes is misconfiguration, defined as “An incorrect or suboptimal 
-            configuration of an information system or system component that may lead to vulnerabilities.” <a href="https://csrc.nist.gov/glossary/term/misconfiguration">(NIST, n.d.)</a>. 
-            These are the most common causes, as complex plans are not needed, but simple methods are used instead, 
-            comparable to leaving a door unlocked, and a thief trespassing. 
-        </p>
-        <h3 id="commonexamples">Common Examples</h3>
-        <p>
-            The top ten misconfigurations can be narrowed to three issues: default configurations, 
-            weak/broken access control and poor patch management <a href="https://www.bleepingcomputer.com/news/security/nsa-and-cisa-reveal-top-10-cybersecurity-misconfigurations/">(Gatlan, 2023)</a>. Numerous software 
-            products have default configurations, geared towards convenience over security, and 
-            must be “hardened” to prevent breaches. Stinginess and convenience lead to access 
-            misconfigurations E.g., weak passwords are used for efficiency, or when software 
-            licencing is per user, but to reduce costs, many users share a single account, 
-            resulting in no accountability, as countless people had access. Developers create 
-            “patches” to repair “holes”, which are identified vulnerabilities. If these are not 
-            applied regularly, the likelihood of exploitation increases, easily fixed with patching. 
-        </p>
-    </section>
-
-    <section>
-        <h2 id="conclusion">Conclusion</h2>
-        <p>
-            In conclusion, the human aspect is more important than assumed, as recent systems are so 
-            secure, the user is the weakest link. Secondly, there is a fine line between convenience 
-            and security. Increased security is positive until the point of interruption, leading to 
-            flaws created for efficiency, making improvements futile.
-        </p>    
-    </section>
+        <section>
+            <h2 id="references">References</h2>
+            <p>Alqubaisi, F., Wazan, A. S., Ahmad, L. & Chadwick, D. W., 2020. Should We Rush to Implement Passwordless Single Factor 
+                FIDO2 based Authentication?. Dubai, IEEE.</p>
+            
+            <p>Bitwarden, 2023. Security habits around the world: A closer look at password security statistics. 
+                [Online] Available at: https://bitwarden.com/blog/a-closer-look-at-password-statistics/ [Accessed 22 November 2023].</p>
     
-    <section>
-        <h2 id="references">References</h2>
-        <p>Alqubaisi, F., Wazan, A. S., Ahmad, L. & Chadwick, D. W., 2020. Should We Rush to Implement Passwordless Single Factor 
-            FIDO2 based Authentication?. Dubai, IEEE.</p>
-        
-        <p>Bitwarden, 2023. Security habits around the world: A closer look at password security statistics. 
-            [Online] Available at: https://bitwarden.com/blog/a-closer-look-at-password-statistics/ [Accessed 22 November 2023].</p>
-
-        <p>Burkett, R., 2013. An alternative framework for agent recruitment: from MICE to RASCLS. Studies in Intelligence, 57(1), pp. 7-17.</p>
-
-        <p>Chris Fox, 2016. NHS Trust fined for 56 Dean Street HIV status leak. BBC News, 9 May, p. 1.</p>
-
-        <p>CISA, 2021. Avoiding Social Engineering and Phishing Attacks. [Online] Available at: 
-            https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks
-            [Accessed 22 November 2023]
-        </p>
-
-        <p>CPNI, 2015. Password Guidance - Simplifying your Approach. [Online] 
-            Available at: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/458857/Password_guidance_-_simplifying_your_approach.pdf
-            [Accessed 22 November 2023].
-        </p>
-
-        <p>FBI, n.d. Morris Worm. [Online] 
-            Available at: https://www.fbi.gov/history/famous-cases/morris-worm
-            [Accessed 22 November 2023].
-        </p>
-
-        <p>Fortinet, n.d. Tailgating Attack: Examples and Prevention. [Online] 
-            Available at: https://www.fortinet.com/resources/cyberglossary/tailgating-attack
-            [Accessed 22 November 2023].
-        </p>
-
-        <p>FTC, 2022. Who experiences scams? A story for all ages. [Online] 
-            Available at: https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2022/12/who-experiences-scams-story-all-ages
-            [Accessed 22 November 2023].
-        </p>
-
-        <p>Gatlan, S., 2023. NSA and CISA reveal top 10 cybersecurity misconfigurations. [Online] 
-            Available at: https://www.bleepingcomputer.com/news/security/nsa-and-cisa-reveal-top-10-cybersecurity-misconfigurations/
-            [Accessed 22 November 2023].
-        </p>
-
-        <p>Griffiths, C., 2023. The latest cyber crime statistics (updated October 2023). [Online] 
-            Available at: https://aag-it.com/the-latest-cyber-crime-statistics/
-            [Accessed 22 November 2023].
-        </p>
-
-        <p>Kaspersky, 2017. The Human Factor in IT Security. [Online] 
-            Available at: https://media.kasperskycontenthub.com/wp-content/uploads/sites/100/2017/11/10083900/20170710_Report_Human-Factor-In-ITSec_eng_final.pdf
-            [Accessed 22 November 2023].
-        </p>
-
-        <p>NCSC, n.d. Glossary - NCSC. [Online] 
-            Available at: https://www.ncsc.gov.uk/section/advice-guidance/glossary
-            [Accessed 22 November 2023].
-        </p>
-
-        <p>NIST, n.d. misconfiguration - Glossary. [Online] 
-            Available at: https://csrc.nist.gov/glossary/term/misconfiguration
-            [Accessed 22 November 2023].
-        </p>
-
-        <p>Ofcom, 2022. Coronavirus scam calls and texts. [Online] 
-            Available at: https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/scams/coronavirus-scam-calls-and-texts
-            [Accessed 22 November 2023].
-        </p>
-            
-        <p>Sutherland, N. & Powell, A., 2023. Debate on the UK tech industry following London tech 
-            week, London: House of Commons Library.
-        </p>
-
-        <p>Taylor, S., 2020. Humans aren't inherently selfish - we're actually hardwired to work 
-            together. The Conversation, 20 August.
-        </p>
-
-        <p>Verizon, 2018. Data Breach Investigations Report. [Online] 
-            Available at: https://www.verizon.com/business/en-gb/resources/reports/dbir/
-            [Accessed 22 November 2023].
-        </p>
-            
-    </section>
+            <p>Burkett, R., 2013. An alternative framework for agent recruitment: from MICE to RASCLS. Studies in Intelligence, 57(1), pp. 7-17.</p>
+    
+            <p>Chris Fox, 2016. NHS Trust fined for 56 Dean Street HIV status leak. BBC News, 9 May, p. 1.</p>
+    
+            <p>CISA, 2021. Avoiding Social Engineering and Phishing Attacks. [Online] Available at: 
+                https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks
+                [Accessed 22 November 2023]
+            </p>
+    
+            <p>CPNI, 2015. Password Guidance - Simplifying your Approach. [Online] 
+                Available at: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/458857/Password_guidance_-_simplifying_your_approach.pdf
+                [Accessed 22 November 2023].
+            </p>
+    
+            <p>FBI, n.d. Morris Worm. [Online] 
+                Available at: https://www.fbi.gov/history/famous-cases/morris-worm
+                [Accessed 22 November 2023].
+            </p>
+    
+            <p>Fortinet, n.d. Tailgating Attack: Examples and Prevention. [Online] 
+                Available at: https://www.fortinet.com/resources/cyberglossary/tailgating-attack
+                [Accessed 22 November 2023].
+            </p>
+    
+            <p>FTC, 2022. Who experiences scams? A story for all ages. [Online] 
+                Available at: https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2022/12/who-experiences-scams-story-all-ages
+                [Accessed 22 November 2023].
+            </p>
+    
+            <p>Gatlan, S., 2023. NSA and CISA reveal top 10 cybersecurity misconfigurations. [Online] 
+                Available at: https://www.bleepingcomputer.com/news/security/nsa-and-cisa-reveal-top-10-cybersecurity-misconfigurations/
+                [Accessed 22 November 2023].
+            </p>
+    
+            <p>Griffiths, C., 2023. The latest cyber crime statistics (updated October 2023). [Online] 
+                Available at: https://aag-it.com/the-latest-cyber-crime-statistics/
+                [Accessed 22 November 2023].
+            </p>
+    
+            <p>Kaspersky, 2017. The Human Factor in IT Security. [Online] 
+                Available at: https://media.kasperskycontenthub.com/wp-content/uploads/sites/100/2017/11/10083900/20170710_Report_Human-Factor-In-ITSec_eng_final.pdf
+                [Accessed 22 November 2023].
+            </p>
+    
+            <p>NCSC, n.d. Glossary - NCSC. [Online] 
+                Available at: https://www.ncsc.gov.uk/section/advice-guidance/glossary
+                [Accessed 22 November 2023].
+            </p>
+    
+            <p>NIST, n.d. misconfiguration - Glossary. [Online] 
+                Available at: https://csrc.nist.gov/glossary/term/misconfiguration
+                [Accessed 22 November 2023].
+            </p>
+    
+            <p>Ofcom, 2022. Coronavirus scam calls and texts. [Online] 
+                Available at: https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/scams/coronavirus-scam-calls-and-texts
+                [Accessed 22 November 2023].
+            </p>
+                
+            <p>Sutherland, N. & Powell, A., 2023. Debate on the UK tech industry following London tech 
+                week, London: House of Commons Library.
+            </p>
+    
+            <p>Taylor, S., 2020. Humans aren't inherently selfish - we're actually hardwired to work 
+                together. The Conversation, 20 August.
+            </p>
+    
+            <p>Verizon, 2018. Data Breach Investigations Report. [Online] 
+                Available at: https://www.verizon.com/business/en-gb/resources/reports/dbir/
+                [Accessed 22 November 2023].
+            </p>
+                
+        </section>
+    </body>
 </html>

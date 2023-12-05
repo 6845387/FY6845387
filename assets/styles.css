@@ -1,6 +1,12 @@
 h1, h2, h3,  h4, h5, h6, p, ul, ol, li, q, a, th, td {
     font-family: monospace;
+    color: #FFFFFF;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    color: #b5e383;
+}
+
 .course-title {
     font-size: 2em;
 }
@@ -32,7 +38,27 @@ h1, h2, h3,  h4, h5, h6, p, ul, ol, li, q, a, th, td {
     border: 1px solid black;
  }
 
- .header {
+ .centre {
     width: 50%;
     margin: auto;
  }
+
+ body {
+    background-color: #1A1A1A;
+ }
+
+ .toplogo {
+    filter: invert(99%) sepia(80%) saturate(1237%) hue-rotate(21deg) brightness(96%) contrast(90%);
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 50%;
+ }
+
+ /* html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+ } */
+
