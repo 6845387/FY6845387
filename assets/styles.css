@@ -66,8 +66,11 @@ p {
     background-color: #1A1A1A;
  }
 
- .toplogo {
+ .svg-green {
     filter: invert(99%) sepia(80%) saturate(1237%) hue-rotate(21deg) brightness(96%) contrast(90%);
+ }
+
+ .toplogo {
     padding: 0;
     display: block;
     margin: 0 auto;
@@ -85,4 +88,44 @@ p {
     margin-left: 200px;
     margin-right: 200px;
     margin-bottom: 100px;
+ }
+
+.slide-container {
+    text-align: center;
+    position: relative;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -100px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #b5e383;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+ .slide-window {
+    width: 100%;
+    max-width: 1280px;
+    border-radius: 2px;
+    border: 3px solid #b5e383;
+
+ }
+
+ .slide-button-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -50px;
  }
