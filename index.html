@@ -2,26 +2,22 @@
 <link rel="stylesheet" href="assets/styles.css">
 <html>
     <header>
-        <div class="row">
-            <div class="column">
-                <h1 class="course-title">ENG0018 Computer Laboratory 2023-24</h1>
-            </div>
-            <div class="column">
-                <img class="column" src="assets/WebLogoCompact.png" width="100%">
-            </div>
+        <div class="header">
+            <img src="assets/WebBanner2023.png">
+            <h1 class="course-title">ENG0018 Computer Laboratory 2023-24</h1>
+            <title>Investigating the most common root causes of data breaches</title>
             
+            <h1 class="urn">URN: 6845387</h1>
+            <h1 id="#pagetitle">Investing the most common root causes of data breaches</h1>
         </div>
-        <title>Investigating the most common root causes of data breaches</title>
         
-        <h1 class="urn">URN: 6845387</h1>
-        <h1 id="#pagetitle">Investing the most common root causes of data breaches</h1>
     </header>
     
     <hr>
     <div class="row">
         <div class="column">
             <h2 id="#toc">Table of Contents</h2>
-            <table>
+            <table class="tableofcontents">
                 <tr>
                     <th>Section</th>
                     <th>Subsection</th>
@@ -30,20 +26,37 @@
                     <td><a href="#abstract">Abstract</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#abstract">Introduction</a></td>
+                    <td><a href="#introduction">Introduction</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#abstract">Credentials</a></td>
+                    <td rowspan="4" ><a href="#abstract">Credentials</a></td>
+                </tr>
+                    <tr>
+                        <td><a href="#problemswithpasswords">Problems with Passwords</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#mfa">Multi-factor Authentication</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#problemswithmfa">Problems with MFA</a></td>
+                    </tr>
+                <tr>
+                    <td rowspan="3"><a href="#abstract">Human Nature</a></td>
+                </tr>
+                    <tr>
+                        <td><a href="#victim">Victim</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#perpetrator">Perpetrator</a></td>
+                    </tr>
+                <tr>
+                    <td><a href="#misconfiguration">Misconfiguration</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#abstract">Human Nature</a></td>
+                    <td><a href="#conclusion">Conclusion</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#abstract">Misconfiguration</a></td>
-                </tr><tr>
-                    <td><a href="#abstract">Abstract</a></td>
-                </tr><tr>
-                    <td><a href="#abstract">Abstract</a></td>
+                    <td><a href="#references">References</a></td>
                 </tr>
             </table>
         </div>
@@ -96,7 +109,7 @@
             from an app, SMS, or hardware device. The third factor is biometrics, such as facial/iris/fingerprint, 
             which is invulnerable to theft. 
         </p>
-        <h4 id="#problemswithmfa">Problems with MFA</h4>
+        <h3 id="#problemswithmfa">Problems with MFA</h3>
         <p>
             Depending on the additional factor used, there can be disadvantages. Firstly, if SMS codes are used, 
             it is vulnerable to SIM swaps, when an attacker impersonates the billpayer to activate a new sim to 

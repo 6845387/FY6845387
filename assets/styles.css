@@ -1,4 +1,4 @@
-h1, h2, h3,  h4, h5, h6, p, ul, ol, li, q {
+h1, h2, h3,  h4, h5, h6, p, ul, ol, li, q, a, th, td {
     font-family: monospace;
 }
 .course-title {
@@ -20,3 +20,19 @@ h1, h2, h3,  h4, h5, h6, p, ul, ol, li, q {
     display: table;
     clear: both;
   }
+
+
+ table {
+    border: 1px solid black;
+    border-collapse: collapse;
+ }
+
+ th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+ }
+
+ .header {
+    width: 50%;
+    margin: auto;
+ }
