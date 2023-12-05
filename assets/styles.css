@@ -7,6 +7,22 @@ h1, h2, h3, h4, h5, h6 {
     color: #b5e383;
 }
 
+h1 {
+    font-size: 28pt;
+}
+
+h2 {
+    font-size: 16pt;
+}
+
+h3 {
+    font-size: 13pt;
+}
+
+p {
+    font-size: 11pt;
+}
+
 .course-title {
     font-size: 2em;
 }
@@ -62,3 +78,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
  } */
 
+ html {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 100px;
+ }
